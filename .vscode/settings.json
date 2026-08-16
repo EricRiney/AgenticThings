@@ -1,0 +1,5 @@
+{
+  // Ensure the Explorer doesn't hide files via excludes in this workspace
+  "files.exclude": {},
+  "search.exclude": {}
+}
