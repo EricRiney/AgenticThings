@@ -66,6 +66,37 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
+  // chat interaction
+  const chatForm = document.getElementById('chatForm');
+  const chatInput = document.getElementById('chatInput');
+  const chatMessages = document.getElementById('chatMessages');
+
+  function addChatMessage(text, sender) {
+    if (!chatMessages || !text) return;
+
+    const entry = document.createElement('div');
+    entry.className = `chat-message ${sender}`;
+    entry.textContent = text;
+    chatMessages.appendChild(entry);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  if (chatForm && chatInput && chatMessages) {
+    chatForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const message = chatInput.value.trim();
+      if (!message) return;
+
+      addChatMessage(message, 'user');
+      chatInput.value = '';
+      chatInput.focus();
+
+      setTimeout(function () {
+        addChatMessage('Thanks for your message! I’ll get back to you soon.', 'bot');
+      }, 400);
+    });
+  }
+
   // contact form
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
