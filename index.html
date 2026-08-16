@@ -14,7 +14,7 @@
     <div class="container header-inner">
       <div class="brand">
         <h1>Eric Riner</h1>
-        <p class="tagline">Frontend developer & designer — building accessible, performant web experiences.</p>
+        <p class="tagline">Record nerd</p>
       </div>
 
       <nav class="site-nav" aria-label="Primary">
@@ -89,6 +89,23 @@
           </div>
         </article>
 
+      </div>
+    </section>
+
+    <section id="chat" class="chat container">
+      <h2>Chat</h2>
+      <p class="section-sub">Ask a question or leave a quick note — new messages are added to the thread instantly.</p>
+
+      <div class="chat-shell" aria-label="Chat panel">
+        <div id="chatMessages" class="chat-messages" aria-live="polite">
+          <div class="chat-message bot">Hi! I’m ready to chat.</div>
+        </div>
+
+        <form id="chatForm" class="chat-form" action="#" novalidate>
+          <label class="sr-only" for="chatInput">Type your message</label>
+          <input id="chatInput" name="chatInput" type="text" maxlength="280" placeholder="Type your message…" required>
+          <button type="submit" class="btn">Send</button>
+        </form>
       </div>
     </section>
 
