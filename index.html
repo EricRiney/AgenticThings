@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eric Riner — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Uniform brutalist font: Space Mono for all text -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio of Eric Riner — frontend development, design, and sample projects." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Eric Riner</h1>
+        <p class="tagline">Frontend developer & designer — building accessible, performant web experiences.</p>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false">☰</button>
+        <ul id="navList" class="nav-list">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button id="themeToggle" class="theme-btn" aria-pressed="false">Toggle Theme</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" id="about">
+      <div class="hero-content">
+        <h2>Hi — I'm Eric.</h2>
+        <p class="lead">I create thoughtful, fast, and accessible web interfaces. I enjoy turning complex problems into elegant, user-friendly solutions.</p>
+        <p><a class="btn" href="#contact">Get in touch</a></p>
+      </div>
+      <div class="hero-decor" aria-hidden="true"></div>
+    </section>
+
+    <section id="projects" class="projects container">
+      <h2>Selected projects</h2>
+      <p class="section-sub">A few projects showcasing frontend development, design, and performance-focused work.</p>
+
+      <div class="project-grid">
+        <article class="card project-card">
+          <div class="card-media">
+            <svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Project 1 mock">
+              <rect width="100%" height="100%" fill="#e6f7ff" />
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#005b96" font-size="20">Project One</text>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>Project One — Dashboard UI</h3>
+            <p>Responsive analytics dashboard built with vanilla JavaScript and CSS Grid. Emphasis on accessibility and performance.</p>
+            <p class="tech">HTML • CSS • JavaScript</p>
+            <p><a class="card-link" href="#" aria-label="Open Project One">View project →</a></p>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div class="card-media">
+            <svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Project 2 mock">
+              <rect width="100%" height="100%" fill="#fff0e6" />
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#b85c38" font-size="20">Project Two</text>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>Project Two — Marketing Site</h3>
+            <p>Pixel-perfect marketing site with a focus on fast load times and SEO-friendly mark-up. Implemented an accessible responsive navigation.</p>
+            <p class="tech">HTML • CSS • Lighthouse</p>
+            <p><a class="card-link" href="#">View project →</a></p>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div class="card-media">
+            <svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Project 3 mock">
+              <rect width="100%" height="100%" fill="#f0f7e6" />
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#4a7a4a" font-size="20">Project Three</text>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>Project Three — Component Library</h3>
+            <p>Design system and component library with accessible primitives and well-documented usage examples.</p>
+            <p class="tech">CSS • Design System</p>
+            <p><a class="card-link" href="#">View project →</a></p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <p class="section-sub">Interested in working together? Send a message and I'll get back soon.</p>
+
+      <form id="contactForm" class="contact-form" action="#" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send message</button>
+          <div id="formStatus" class="form-status" aria-live="polite"></div>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Eric Riner — Built with HTML, CSS & JavaScript.</p>
+      <p class="socials">
+        <a href="#" aria-label="Twitter">Twitter</a> · <a href="#" aria-label="GitHub">GitHub</a> · <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
